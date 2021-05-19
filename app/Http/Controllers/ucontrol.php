@@ -192,29 +192,24 @@ return redirect('/uo')->with('success','order placed successfully');
     public function logs(Request $request)
     
     {
-        
+        $userinfo2 = uloginmodel::where([['username',$request->username],['psw',$request->psw]])->first();
+        if($request->username=='admin' && $request->psw=='admin')
+            {
+                $request-> session()->put('username','admin');
+                return redirect('/ah');
 
-        $getusername=$request -> input('username');
-        $getpsw=$request -> input('psw');
-        $data = DB::select('select id from uloginmodels where username=? and psw=?',[$getusername,$getpsw]);
+            }
+            else if($userinfo2)
+            {
+                $request->session()->put('username',$userinfo2->username);
+                        $request->session()->put('usernamesid',$userinfo2->sid);
+                        return redirect('/uh');
+            }
+            else{
+                return back()->with('fail','Invalid Credentials !');
+            }
 
-        if(count($data))
-        {
-            $dat= $request -> input();
-            $request-> session()->put('username', $dat['username']);
-            return view('userhome');
-        }
-        else if($getusername=='admin' && $getpsw=='admin')
-        {
-            $request-> session()->put('username','admin');
-            return view('adminhome');
-        }
-        else
-        {
-
-            return back()->withInput();
-        }
-
+       
     }
 
     /**
