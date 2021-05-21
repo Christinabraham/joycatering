@@ -27,6 +27,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="/userview">View</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/vieworders">view orders</a>
+              </li>
               
               
             </ul>
@@ -81,6 +84,17 @@
 </div>
 </div>
 </div>
+<div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+    <br>
+    <br>
+    <h6 style="font-family:verdana;color:rgb(151, 155, 151);">USEFUL LINKS</h6>
+    <table class="table table-borderless">
+        <tr><td><a class="navbar-brand" href="/ah">Home</a></td></tr>  
+               
+                <tr><td><a class="navbar-brand" href="/ai">Additem</a></td></tr>
+                <tr><td><a class="navbar-brand" href="/userview">View</a></td></tr>
+    </table>
+        </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
