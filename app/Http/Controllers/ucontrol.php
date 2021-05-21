@@ -266,6 +266,12 @@ return redirect('/uo')->with('success','order placed successfully');
         //$data=['loggeduserinfo'=>AdminModel::where('username','=',session('loggeduser'))->first()];
         return view('booking',compact('event','food','stage'));
     }
+    public function vieworders()
+    { 
+        $prod=bmodel::all();
+        return view('auoview',compact('prod'));
+
+    }
     
 
 

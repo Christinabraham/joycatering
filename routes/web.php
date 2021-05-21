@@ -22,19 +22,6 @@ Route::post('/login',[ucontrol::class,'store']);
 Route::post('/logs',[ucontrol::class,'logs']);
 
 
-
-
-
-
-
-
-
-   
-    
-    
-
-
-
 Route::post('/ap',[pcontrol::class,'event']);
 
 
@@ -60,9 +47,11 @@ Route::get('/editevent/{id}',[pcontrol::class , 'editevent' ] );
         Route::get('/deletefood/{fid}',[pcontrol::class , 'deletefood' ] );
         Route::get('/deletestage/{sid}',[pcontrol::class , 'deletestage' ] );
 
-
+        Route::get('/vieworders',[ucontrol::class , 'vieworders' ] );
+       
 Route::group(['middleware'=>['AuthCheck']],function(){
 
+        
 
     Route::get('/cc',[ucontrol::class , 'ccontact' ] );
     Route::get('/cg',[ucontrol::class , 'cgallery' ] );

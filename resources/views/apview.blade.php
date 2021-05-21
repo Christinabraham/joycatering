@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>alteritem</title>
+    <title>view</title>
 </head>
 
 <body background="https://wallpaperaccess.com/full/1566582.jpg"  style="height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover;">

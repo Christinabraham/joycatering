@@ -20,7 +20,7 @@ class AuthCheck
         {
             if(session('username')=='admin')
             {
-                if($request->path()!='ah' && $request->path()!='ai' && $request->path()!='editevent/{id}' && $request->path()!='editfood/{id}'&& $request->path()!='editstage/{id}'&& $request->path()!='deleteevent/{eid}'&& $request->path()!='deletefood/{fid}'&& $request->path()!='deletestage/{sid}'&& $request->path()!='userview')
+                if($request->path()!='ah' && $request->path()!='ai' && $request->path()!='editevent/{id}' && $request->path()!='editfood/{id}'&& $request->path()!='editstage/{id}'&& $request->path()!='deleteevent/{eid}'&& $request->path()!='deletefood/{fid}'&& $request->path()!='deletestage/{sid}'&& $request->path()!='userview' && $request->path()!='/vieworders')
                 {
                     return back();
                 }

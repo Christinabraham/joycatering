@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>editstage</title>
+    <title>view</title>
 </head>
 
 <body background="https://wallpaperaccess.com/full/1566582.jpg"  style="height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover;">
@@ -22,7 +22,10 @@
                 <a class="nav-link active" aria-current="page" href="/ah">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/ai">Alter Items</a>
+                <a class="nav-link" href="/ai">Add Items</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/userview">View</a>
               </li>
               
               
@@ -31,7 +34,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     
                     <li class="nav-item">
-                        <a class="nav-link active" href="/">Log Out</a>
+                        <a class="nav-link active" href="/logout">Log Out</a>
                     </li>
                 </ul>
             </form>
@@ -39,60 +42,46 @@
           </div>
         </div>
       </nav>
+      
+<br>
 <div class="container">
-
 <div class="row">
-<div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 ">
+<div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 ">
  </div>
- <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 ">
- <br><br>
- <form action="/upstage" method="post">
- @csrf
- <table style="font-family:verdana;color:rgb(161, 165, 190);" class="table table-borderless">
- <tr>
-     <td>Stage Design id</td>
-     <td>Stage Design Type</td>
-     <td>Stage Design Price</td>
-     <td><input type="hidden" name="id"  value="{{$info->id}}"/></td>
-     </tr>
-     <tr>
-     <td><input value="{{$info->sid}}" name="sid" type="text" class="form-control"></td>
-     <td><input value="{{$info->stype}}" name="stype" type="text" class="form-control"></td>
-     <td><input value="{{$info->sprice}}" name="sprice" type="text" class="form-control"></td>
-
-     <td><button class="btn btn-outline-primary"  type="submite">UPDATE</button></td></tr>
+ <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8 ">
  
- 
+ <table class="table  table-success table-striped">
+<tr><th>User Name</th>
+    <th >Event Name</th>
+    <th > Food Package</th>
+    <th >Stage Design</th>
+    <th >Total Price</th>
     
+    <th></th> <th></th>
+    </tr>
 
+@foreach($prod as $prods)
 
+<tr >
 
- 
- 
- </table>
- </form>
- </div>
- <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 ">
+    <td>{{$prods->uname}}</td>
+    <td>{{$prods->ename}}</td>
+    <td>{{$prods->fname}}</td>
+    <td>{{$prods->stype}}</td>
+    <td>{{$prods->total}}</td>
+    
+    <!-- <td><a class="btn btn-warning"  href="/order/{{$prods->id}}/edit" >UPDATE</a></td> -->
+    
+</tr>
+
+@endforeach
+</table>
+</div>
+ <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
 </div>
 </div>
 </div>
 
-<div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-    <br>
-    <br>
-    <h6 style="font-family:verdana;color:rgb(151, 155, 151);">USEFUL LINKS</h6>
-    <table class="table table-borderless">
-        <tr><td><a class="navbar-brand" href="/ah">Home</a></td></tr>  
-               
-                <tr><td><a class="navbar-brand" href="/ai">Alteritem</a></td></tr>
-    </table>
-        </div>
-
-        
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>  
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>

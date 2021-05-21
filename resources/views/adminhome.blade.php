@@ -23,8 +23,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="/ai">Add Items</a>
               </li>
+              
               <li class="nav-item">
                 <a class="nav-link" href="/userview">View</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/vieworders">view orders</a>
               </li>
               
               
