@@ -73,7 +73,7 @@
     <td>{{$prods->stype}}</td>
     <td>{{$prods->total}}</td>
     
-    <!-- <td><a class="btn btn-warning"  href="/order/{{$prods->id}}/edit" >UPDATE</a></td> -->
+
     
 </tr>
 
