@@ -118,7 +118,7 @@ class pcontrol extends Controller
     }
     public function upstage(Request $request)
     {
-        $updating=DB::table('fmodels')->where('id',$request->input('id'))->update([
+        $updating=DB::table('smodels')->where('id',$request->input('id'))->update([
             'sid'=>$request->input('sid'),
             'stype'=>$request->input('stype'),
             'sprice'=>$request->input('sprice')
