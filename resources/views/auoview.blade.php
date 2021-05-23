@@ -67,7 +67,6 @@
     <th >Stage Design</th>
     <th >Total Price</th>
     
-    
     </tr>
 
 @foreach($prod as $prods)
