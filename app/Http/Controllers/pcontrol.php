@@ -40,7 +40,7 @@ class pcontrol extends Controller
         $this->validate($request,[
             'eid' => 'required|unique:App\Models\pmodel,eid',
             'ename' => 'required',
-            'eprice' => 'required'
+            'eprice' => 'required|integer'
             
         ]);
 

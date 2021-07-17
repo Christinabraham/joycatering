@@ -38,7 +38,7 @@ class fcontrol extends Controller
         $this->validate($request,[
             'fid' => 'required|unique:App\Models\fmodel,fid',
             'fname' => 'required',
-            'fprice' => 'required'
+            'fprice' => 'required|integer'
             
         ]);
 
