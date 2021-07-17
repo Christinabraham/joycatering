@@ -68,6 +68,7 @@
         <td><button type="submit" class="btn btn-primary">ADD</button></td></form>
         
     </tr>
+    
     <tr> <form action="/af" method="post">
             {{ csrf_field() }} 
         <td style="color:rgba(161, 161, 167, 0.911)">Food Package</td>
